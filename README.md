@@ -4,7 +4,7 @@
 
 > 漫画爬虫工具
 
-使用selenium搭建的简单漫画爬虫工具。
+使用selenium搭建的简单漫画爬虫工具。==具体爬取逻辑针对不同网站需要手动编写具体爬取逻辑(爬取逻辑都是大同小异的)==
 
 参考demo.py，设置相应的参数：
 
@@ -21,9 +21,9 @@ if __name__ == '__main__':
         site=site,                                  # 漫画首页
         begin=0,                                    # 起始章节
         end=-1,                                     # 结束章节，为负数表明不设结束章节
-        save_folder='/path/to/download',            # 保存路径，不存在会自动创建
-        browser=cc.BrowserType.PHANTOMJS,           # 浏览器类型：FIREFOX，CHROME，SAFARI，IE，PHANTOMJS
-        driver='path/to/phantomjs')                 # 驱动程序路径，firefox不需要                                         
+        save_folder='./download',           # 保存路径，不存在会自动创建
+        browser=cc.BrowserType.FIREFOX,     # 浏览器类型：FIREFOX，CHROME，SAFARI，IE，PHANTOMJS
+        driver='./driver/geckodriver.exe')  # 驱动程序路径                                      
     crawler.start()
 ```
 
@@ -88,7 +88,27 @@ Firefox全历史版本下载： http://ftp.mozilla.org/pub/mozilla.org//firefox/
   2.35			62-64
   ```
 
-## 常用
+## 版本需求
+
+详情见:  environment.yml 或者 requirements.txt
+
+```
+# This file may be used to create an environment using:
+# $ conda create --name <env> --file <this file>
+# platform: win-64
+brotlipy=0.7.0=py38h2bbff1b_1003
+bzip2=1.0.8=h2bbff1b_5
+ca-certificates=2024.3.11=haa95532_0
+certifi=2024.2.2=py38haa95532_0
+cffi=1.16.0=py38h2bbff1b_0
+cryptography=41.0.3=py38h3438e0d_
+selenium=3.141.0=py38h2bbff1b_1000
+.......
+```
+
+## 常用方法
+
+例子
 
 ```python
 # 使用 CSS 选择器定位所有 class="pic" 或 class="pic loading" 的元素
@@ -160,6 +180,4 @@ random_sleep()
 
 # 关闭浏览器
 driver.quit()
-
 ```
-

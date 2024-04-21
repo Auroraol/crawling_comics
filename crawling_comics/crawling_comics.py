@@ -1,5 +1,6 @@
 # -*- coding: utf-8 -*-
 import random
+import time
 
 from PIL import Image
 from selenium import webdriver
@@ -37,7 +38,7 @@ class CrawlingComics:
         :param begin: 章节的开始(含),0表示第一章
         :param end: 章节的结束(含),-1表示到结尾
         :param browser: 浏览器类型
-        :param driver: 驱动，如果驱动程序在可访问的位置，这个参数非必须，对于PhantomJs，驱动程序就是改程序的地址
+        :param driver_path: 驱动，如果驱动程序在可访问的位置，这个参数非必须，对于PhantomJs，驱动程序就是改程序的地址
         """
 
         self.__site = site
@@ -197,7 +198,7 @@ class CrawlingComics:
         next_page_link = self.__browser.find_element_by_link_text('下一頁')
         return next_page_link  # next_page_link.click()点击下一页链接元素
 
-    # 漫画图片
+    # 漫画图片(本案例没使用)
     def find_download(self):
         image_div = self.__browser.find_element_by_css_selector('.pic')
         image_url = image_div.get_attribute('_src')
