@@ -7,5 +7,5 @@ crawling_comics/__pycache__/
 *.py[cod]
 *$py.class
 
-#
+#忽略下载文件夹
 download/*
