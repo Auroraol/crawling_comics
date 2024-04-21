@@ -1,1 +1,11 @@
+#Pycharm specific
 .idea
+
+
+# Byte-compiled / optimized / DLL files
+crawling_comics/__pycache__/
+*.py[cod]
+*$py.class
+
+#
+download/*
