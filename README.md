@@ -4,7 +4,7 @@
 
 > 漫画爬虫工具
 
-使用selenium搭建的简单漫画爬虫工具。==具体爬取逻辑针对不同网站需要手动编写具体爬取逻辑(爬取逻辑都是大同小异的)==
+使用selenium搭建的简单漫画爬虫工具。具体爬取逻辑针对不同网站需要手动编写具体爬取逻辑(爬取逻辑都是大同小异的)
 
 参考demo.py，设置相应的参数：
 
@@ -181,3 +181,8 @@ random_sleep()
 # 关闭浏览器
 driver.quit()
 ```
+
+## 参考
+
+个人爬虫笔记:  [python-note (github.com)](https://github.com/Auroraol/python-note/blob/main/爬虫/Python爬虫/Python爬虫.md)
+
