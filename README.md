@@ -120,7 +120,7 @@ for element in pic_elements:
         print(src_attribute)
 ```
 
-例子
+selenium 例子
 
 ```python
 from selenium import webdriver
